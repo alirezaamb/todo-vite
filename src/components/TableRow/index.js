@@ -1,13 +1,13 @@
 import { El } from '../shared/El';
 
-export const tableRow = (data) => {
+export const createTableRow = (data) => {
   return El({
     element: 'tr',
     className: 'p-4 text-center h-[20px]',
     children: [
       El({
         element: 'td',
-        className: 'text-left border border-slate-300',
+        className: 'text-left border border-slate-300 px-3',
         innerText: data.title,
       }),
       El({
@@ -16,14 +16,14 @@ export const tableRow = (data) => {
         children: [
           El({
             element: 'span',
-            className: `px-3 py-1 rounded-2xl ${data.priorityColor} `,
+            className: `px-3 py-1 rounded-2xl  ${data.priorityColor} `,
             innerText: data.priority,
           }),
         ],
       }),
       El({
         element: 'td',
-        className: 'border border-slate-300',
+        className: 'border border-slate-300 ',
         children: [
           El({
             element: 'span',
@@ -34,7 +34,7 @@ export const tableRow = (data) => {
       }),
       El({
         element: 'td',
-        className: 'border border-slate-300',
+        className: 'border border-slate-300 ',
         children: [
           El({
             element: 'span',
@@ -45,7 +45,7 @@ export const tableRow = (data) => {
       }),
       El({
         element: 'td',
-        className: 'flex gap-3 justify-center p-5 border border-slate-300',
+        className: 'flex gap-3 justify-center p-5 border border-slate-300 ',
         children: [
           El({
             element: 'img',
