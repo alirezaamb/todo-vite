@@ -1,42 +1,6 @@
 {
   "todo": [
     {
-      "title": "task1",
-      "deadline": "2024-03-27",
-      "priority": "Low",
-      "status": "ToDo",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792099006
-    },
-    {
-      "title": "task2",
-      "deadline": "2024-03-09",
-      "priority": "Medium",
-      "status": "Doing",
-      "priorityColor": "bg-yellow-500",
-      "statusColor": "bg-yellow-500",
-      "id": 1711792114690
-    },
-    {
-      "title": "task3",
-      "deadline": "2024-03-24",
-      "priority": "High",
-      "status": "Done",
-      "priorityColor": "bg-green-500",
-      "statusColor": "bg-green-500",
-      "id": 1711792121484
-    },
-    {
-      "title": "task4",
-      "deadline": "2024-03-08",
-      "priority": "Low",
-      "status": "Done",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-green-500",
-      "id": 1711792136229
-    },
-    {
       "title": "task5",
       "deadline": "2024-03-26",
       "priority": "Medium",

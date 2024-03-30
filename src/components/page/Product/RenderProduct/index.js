@@ -1,6 +1,6 @@
-import { getTableRow } from '../../../../api/get';
-import { createTableRow } from '../../../TableRow';
-import { El } from '../../../shared/El';
+import { getTableRow } from "../../../../api/get";
+import { createTableRow } from "../../../TableRow";
+import { El } from "../../../shared/El";
 
 // export const renderProducts = () => {
 //   getTableRow().then((data) => {
@@ -18,14 +18,14 @@ import { El } from '../../../shared/El';
 
 //another way
 
-export const renderProducts = () => {
-  getTableRow().then((data) => {
+export const renderProducts = (findItem = "") => {
+  getTableRow((findItem)).then((data) => {
     console.log(data);
-    const tableTbody = document.getElementById('tableTbody');
-    const containerTbody = document.getElementById('table-one');
-    tableTbody.innerText = '';
+    const tableTbody = document.getElementById("tableTbody");
+    const containerTbody = document.getElementById("table-one");
+    tableTbody.innerText = "";
     const tableRowDiv = El({
-      element: 'tbody',
+      element: "tbody",
       children: data.map((item) => createTableRow(item)),
     });
     containerTbody.append(tableRowDiv);
