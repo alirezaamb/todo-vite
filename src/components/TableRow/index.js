@@ -1,6 +1,17 @@
+import { deleteData } from '../../api/delete';
+import { renderProducts } from '../page/Product/RenderProduct';
 import { El } from '../shared/El';
 
 export const createTableRow = (data) => {
+  const deleteRow = () => {
+    deleteData(data.id).then((res) => {
+      console.log('here');
+      location.reload();
+      renderProducts();
+    });
+    // .catch((err) => console.error(err));
+  };
+
   return El({
     element: 'tr',
     className: 'p-4 text-center h-[20px]',
@@ -51,10 +62,12 @@ export const createTableRow = (data) => {
             element: 'img',
             className: 'w-6 cursor-pointer bg-red-500 rounded',
             src: '../../src/assets/image/trash-solid.svg',
-            // eventListener:[{
-            //     event:'click',
-            //     callback:deleteRow
-            // }]
+            eventListener: [
+              {
+                event: 'click',
+                callback: deleteRow,
+              },
+            ],
           }),
           El({
             element: 'img',

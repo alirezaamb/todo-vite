@@ -51,7 +51,7 @@ export const table = () => {
           }),
           El({
             element: 'tbody',
-            id: 'containerTbody',
+            id: 'tableTbody',
             innerText: 'loading...',
             children: [],
           }),
