@@ -4,14 +4,19 @@ import { renderProducts } from "../../components/page/Product/RenderProduct";
 import { debounce } from "lodash";
 
 export const header = () => {
+  // const tableRowDiv  = document.querySelectorAll("tbody");
+
   const searchProduct = (event) => {
+   const tableRowDiv =  document.getElementById("tableRowDiv");
+     tableRowDiv.remove() ;
+
     let findItem = event.target.value;
-    // location.reload();
-    console.log("kk");
-    const tableTbody = document.getElementById("tableTbody");
-    tableTbody.innerHTML = "";
+    console.log(findItem);
+
+    console.log(tableRowDiv);
+
     renderProducts(findItem);
-    debounce(() => renderProducts(findItem), 2000);
+    // debounce(() => renderProducts(findItem), 2000);
   };
   return El({
     element: "div",

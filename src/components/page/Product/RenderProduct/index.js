@@ -19,13 +19,14 @@ import { El } from "../../../shared/El";
 //another way
 
 export const renderProducts = (findItem = "") => {
-  getTableRow((findItem)).then((data) => {
+  getTableRow(findItem).then((data) => {
     console.log(data);
-    const tableTbody = document.getElementById("tableTbody");
     const containerTbody = document.getElementById("table-one");
-    tableTbody.innerText = "";
-    const tableRowDiv = El({
+    const tableTbody = document.getElementById("tableTbody");
+    tableTbody.innerHTML = "";
+    let tableRowDiv = El({
       element: "tbody",
+      id : "tableRowDiv",
       children: data.map((item) => createTableRow(item)),
     });
     containerTbody.append(tableRowDiv);

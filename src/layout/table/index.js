@@ -50,10 +50,10 @@ export const table = () => {
             ],
           }),
           El({
-            element: 'tbody',
+            element: 'div',
             id: 'tableTbody',
             innerText: 'loading...',
-            children: [],
+            // children: [],
           }),
         ],
       }),
