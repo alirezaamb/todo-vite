@@ -3,17 +3,16 @@ import { renderProducts } from "../page/Product/RenderProduct";
 import { El } from "../shared/El";
 
 export const createTableRow = (data) => {
-  const tableTbody = document.getElementById("tableTbody");
   const deleteRow = () => {
     deleteData(data.id).then((res) => {
+      const tableTbody = document.getElementById("tableTbody");
       tableTbody.innerHTML = "loading...";
-
       console.log("here");
-      // location.reload();
       const tableRowDiv = document.getElementById("tableRowDiv");
       tableRowDiv.remove();
 
-      renderProducts();
+      document.getElementById("page").innerText = "1";
+      renderProducts("", page);
     });
     // .catch((err) => console.error(err));
   };

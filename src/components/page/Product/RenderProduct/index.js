@@ -18,16 +18,17 @@ import { El } from "../../../shared/El";
 
 //another way
 
-export const renderProducts = (findItem = "") => {
-  getTableRow(findItem).then((data) => {
-    console.log(data);
+export const renderProducts = (findItem = "" , page) => {
+  getTableRow(findItem , page).then((data) => {
+    console.log(data.data , "tgk");
     const containerTbody = document.getElementById("table-one");
     const tableTbody = document.getElementById("tableTbody");
-    tableTbody.innerHTML = "";
+    tableTbody.innerText=""
+    // tableTbody.innerText=""
     let tableRowDiv = El({
       element: "tbody",
       id : "tableRowDiv",
-      children: data.map((item) => createTableRow(item)),
+      children: data.data.map((item) => createTableRow(item)),
     });
     containerTbody.append(tableRowDiv);
   });

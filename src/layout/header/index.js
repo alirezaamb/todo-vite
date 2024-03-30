@@ -7,8 +7,11 @@ export const header = () => {
   // const tableRowDiv  = document.querySelectorAll("tbody");
 
   const searchProduct = (event) => {
-   const tableRowDiv =  document.getElementById("tableRowDiv");
-     tableRowDiv.remove() ;
+    const tableRowDiv = document.getElementById("tableRowDiv");
+    tableRowDiv.remove();
+    //  document.getElementById("page").innerHTML = currentPage;
+    // let currentPage = "1"
+    // document.getElementById("page").innerHTML = currentPage;
 
     let findItem = event.target.value;
     console.log(findItem);
