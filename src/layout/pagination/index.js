@@ -3,8 +3,8 @@ import { El } from "../../components/shared/El";
 import { getTableRow } from "../../api/get";
 
 let currentPage = 1;
-const totalPage = await getTableRow();
 
+const totalPage = await getTableRow();
 export const pagination = () => {
   const prevPage = () => {
     document.getElementById("page").innerHTML = currentPage;
@@ -14,17 +14,17 @@ export const pagination = () => {
     tableTbody.innerHTML = "loading...";
     const tableRowDiv = document.getElementById("tableRowDiv");
     tableRowDiv.remove();
-    console.log(currentPage);
+    // console.log(currentPage);
     renderProducts("", currentPage);
   };
   const nextPage = () => {
     // if (currentPage === 1) return ;
-    console.log(`total = ${totalPage.totalPage
-    }`);
+    // console.log(`total = ${totalPage.totalPage
+    // }`);
     if (currentPage >= totalPage.totalPage) return;
 
     document.getElementById("page").innerHTML = ++currentPage;
-    console.log(currentPage);
+    // console.log(currentPage);
     // const tableTbody = document.querySelector("#tableTbody");
     // tableTbody.innerHTML = "loading...";
     const tableRowDiv = document.getElementById("tableRowDiv");

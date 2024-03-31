@@ -37,15 +37,6 @@
       "id": 1711792136229
     },
     {
-      "title": "task5",
-      "deadline": "2024-03-08",
-      "priority": "High",
-      "status": "ToDo",
-      "priorityColor": "bg-green-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792156045
-    },
-    {
       "title": "task6",
       "deadline": "2024-03-24",
       "priority": "High",
@@ -62,24 +53,6 @@
       "priorityColor": "bg-red-500",
       "statusColor": "bg-green-500",
       "id": 1711792136229
-    },
-    {
-      "title": "task8",
-      "deadline": "2024-03-26",
-      "priority": "Medium",
-      "status": "Done",
-      "priorityColor": "bg-yellow-500",
-      "statusColor": "bg-green-500",
-      "id": 1711792146017
-    },
-    {
-      "title": "task9",
-      "deadline": "2024-03-08",
-      "priority": "High",
-      "status": "ToDo",
-      "priorityColor": "bg-green-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792156045
     },
     {
       "title": "task10",

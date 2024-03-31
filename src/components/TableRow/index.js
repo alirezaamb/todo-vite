@@ -7,12 +7,14 @@ export const createTableRow = (data) => {
     deleteData(data.id).then((res) => {
       const tableTbody = document.getElementById("tableTbody");
       tableTbody.innerHTML = "loading...";
-      console.log("here");
       const tableRowDiv = document.getElementById("tableRowDiv");
       tableRowDiv.remove();
 
-      document.getElementById("page").innerText = "1";
-      renderProducts("", page);
+      let currentPage = document.getElementById("page").innerText ;
+      console.log(data);
+      console.log(currentPage)
+
+      renderProducts("", currentPage);
     });
     // .catch((err) => console.error(err));
   };
