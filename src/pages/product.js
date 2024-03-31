@@ -1,6 +1,7 @@
 // import { El } from '..components/shared/El/index.js';
 
 import { modalAdd } from '../components/modal-add';
+import { filterModal } from '../components/modal-filter';
 import { renderProducts } from '../components/page/Product/RenderProduct';
 import { El } from '../components/shared/El';
 import { OverlayModal } from '../components/shared/overlay';
@@ -13,6 +14,6 @@ export const todo = () => {
 
   return El({
     element: 'div',
-    children: [header(), table(), OverlayModal(), modalAdd()],
+    children: [header(), table(), OverlayModal(), modalAdd() , filterModal()],
   });
 };

@@ -2,6 +2,7 @@ import { getTableRow } from '../../api/get';
 import { El } from '../../components/shared/El';
 import { renderProducts } from '../../components/page/Product/RenderProduct';
 import { debounce } from 'lodash';
+import { filterModal } from '../../components/modal-filter';
 
 export const header = () => {
   const searchProduct = (event) => {
@@ -19,6 +20,12 @@ export const header = () => {
     renderProducts(findItem);
     // debounce(() => renderProducts(findItem), 2000);
   };
+const openFilterModal = ()=>{
+  const modalFilter = document.getElementById("modalFilter")
+modalFilter.classList.remove("hidden")
+}
+
+
   const openAddModal = () => {
     const overlayModal = document.getElementById('overlayModal');
     const modalAdd = document.getElementById('modalAdd');
@@ -27,7 +34,7 @@ export const header = () => {
   };
   return El({
     element: 'div',
-    className: 'text-white  bg-[#6900e8] flex justify-between p-2 py-4',
+    className: 'text-white  bg-[#6900e8] flex justify-between p-2 py-4 h-[60px]',
     children: [
       El({
         element: 'div',
@@ -73,6 +80,7 @@ export const header = () => {
             element: 'img',
             src: '../../src/assets/image/icon-filter.png',
             className: 'w-7 h-7 cursor-pointer',
+            onclick : openFilterModal,
           }),
           El({
             element: 'img',

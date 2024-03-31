@@ -39,66 +39,6 @@
       "priorityColor": "bg-red-500",
       "statusColor": "bg-red-500",
       "id": 1711792136244
-    },
-    {
-      "title": "test",
-      "deadline": "2024-02-13",
-      "priority": "High",
-      "status": "Doing",
-      "description": "",
-      "priorityColor": "bg-green-500",
-      "statusColor": "bg-yellow-500",
-      "id": 1711792136245
-    },
-    {
-      "title": "sdfdsfdsf",
-      "deadline": "2024-03-19",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136246
-    },
-    {
-      "title": "sasasas",
-      "deadline": "2024-03-29",
-      "priority": "Medium",
-      "status": "Done",
-      "description": "",
-      "priorityColor": "bg-yellow-500",
-      "statusColor": "bg-green-500",
-      "id": 1711792136247
-    },
-    {
-      "title": "sdfdsfdsf",
-      "deadline": "2024-03-22",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136248
-    },
-    {
-      "title": "kkkkkkk",
-      "deadline": "2024-03-22",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136249
-    },
-    {
-      "title": "kjjjj",
-      "deadline": "2024-03-11",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136250
     }
   ]
 }
