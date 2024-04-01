@@ -20,9 +20,9 @@ import { El } from '../../../shared/El';
 
 /*write the code with fetch and then*/
 
-export const renderProducts = (findItem = '', page) => {
-  getTableRow(findItem, page).then((data) => {
-    // console.log(data.data, "tgk");
+export const renderProducts = (findItem = '', page , filters) => {
+  getTableRow(findItem, page ,filters ).then((data) => {
+    console   .log(data.data, "tgk");
     const containerTbody = document.getElementById('table-one');
     const tableTbody = document.getElementById('tableTbody');
     tableTbody.innerText = '';

@@ -1,8 +1,14 @@
 import { deleteData } from '../../api/delete';
+// import { modalEdit } from '../modal-edit';
 import { renderProducts } from '../page/Product/RenderProduct';
 import { El } from '../shared/El';
 
 export const createTableRow = (data) => {
+//   const editRow = () =>{
+// modalEdit()
+
+
+//   }
   const deleteRow = () => {
     deleteData(data.id).then((res) => {
       const tableTbody = document.getElementById('tableTbody');
@@ -80,10 +86,10 @@ export const createTableRow = (data) => {
             element: 'img',
             className: 'w-6 cursor-pointer bg-blue-500 rounded',
             src: '../../src/assets/image/edit-solid.svg',
-            // eventListener:[{
-            //     event:'click',
-            //     callback:editRow
-            // }]
+          //   eventListener:[{
+          //     event:'click',
+          //     callback:editRow
+          // }]
           }),
           El({
             element: 'img',
@@ -91,7 +97,7 @@ export const createTableRow = (data) => {
             src: '../../src/assets/image/eye-solid.svg',
             // eventListener:[{
             //     event:'click',
-            //     callback:modal
+            //     callback:
             // }]
           }),
         ],

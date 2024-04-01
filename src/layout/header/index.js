@@ -13,9 +13,9 @@ export const header = () => {
     document.getElementById('page').innerHTML = currentPage;
 
     let findItem = event.target.value;
-    console.log(findItem);
+    // console.log(findItem);
 
-    console.log(tableRowDiv);
+    // console.log(tableRowDiv);
 
     renderProducts(findItem);
     // debounce(() => renderProducts(findItem), 2000);
