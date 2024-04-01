@@ -1,64 +1,44 @@
 {
   "todo": [
     {
-      "title": "111",
+      "title": "7",
       "deadline": "2024-03-22",
       "priority": "Low",
       "status": "ToDo",
       "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
+      "priorityColor": "bg-slate-300",
+      "statusColor": "bg-red-500 text-white",
       "id": 1711792136241
     },
     {
       "title": "2",
       "deadline": "2024-03-27",
-      "priority": "Low",
-      "status": "ToDo",
+      "priority": "Medium",
+      "status": "Doing",
       "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
+      "priorityColor": "bg-yellow-500",
+      "statusColor": "bg-yellow-500",
       "id": 1711792136244
     },
     {
       "title": "3",
       "deadline": "2024-04-15",
-      "priority": "Medium",
-      "status": "Doing",
+      "priority": "High",
+      "status": "Done",
       "description": "mghm",
-      "priorityColor": "bg-yellow-500",
-      "statusColor": "bg-yellow-500",
+      "priorityColor": "bg-red-500 text-white",
+      "statusColor": "bg-green-600 text-white",
       "id": 1711792136245
     },
     {
-      "title": "1",
-      "deadline": "2024-04-03",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "1",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136246
-    },
-    {
-      "title": "test title",
-      "deadline": "2024-04-22",
+      "title": "4",
+      "deadline": "2024-04-02",
       "priority": "High",
       "status": "ToDo",
-      "description": "desc",
-      "priorityColor": "bg-green-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136248
-    },
-    {
-      "title": "dsfsdfsdfdf",
-      "deadline": "2024-04-30",
-      "priority": "Low",
-      "status": "ToDo",
-      "description": "",
-      "priorityColor": "bg-red-500",
-      "statusColor": "bg-red-500",
-      "id": 1711792136249
+      "description": "mi,tui",
+      "priorityColor": "bg-red-500 text-white",
+      "statusColor": "bg-red-500 text-white",
+      "id": 1711792136246
     }
   ]
 }

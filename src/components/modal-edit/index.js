@@ -7,21 +7,7 @@ import { OverlayModal } from '../shared/overlay';
 import { validateInputs } from '../shared/validateInput';
 
 export const editModal = () => {
-  // const saveHandler = (e) => {
-  //   e.preventDefault();
-  //   // editRow();
-  //   getTableRow().then((data) => {
-  //     console.log(data.data, 'tgk');
-  //     const a = data.data.filter((item) => item.id == '1711792136244');
-  //     console.log(a);
-  //   });
 
-  //   // const taskInput = document.getElementById("task-input");
-  //   // const descriptionInput = document.getElementById("description_input");
-  //   // const dateInput = document.getElementById("date-input");
-  //   // const prioritySelect = document.getElementById("priority_select");
-  //   // const statusSelect = document.getElementById("status_select");
-  // };
 
   return El({
     element: 'div',

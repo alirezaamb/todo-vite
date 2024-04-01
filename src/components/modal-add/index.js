@@ -20,16 +20,13 @@ export const modalAdd = () => {
 
         switch (statusSelect.value) {
           case "ToDo":
-            statusColor = "bg-red-500";
-
+            statusColor = "bg-red-500 text-white";
             break;
           case "Doing":
             statusColor = "bg-yellow-500";
-
             break;
           case "Done":
-            statusColor = "bg-green-500";
-
+            statusColor = "bg-green-600 text-white";
             break;
         }
         return statusColor;
@@ -39,13 +36,13 @@ export const modalAdd = () => {
         let priorityColor = "";
         switch (prioritySelect.value) {
           case "Low":
-            priorityColor = "bg-red-500";
+            priorityColor = "bg-slate-300";
             break;
           case "Medium":
             priorityColor = "bg-yellow-500";
             break;
           case "High":
-            priorityColor = "bg-green-500";
+            priorityColor = "bg-red-500 text-white";
             break;
         }
         return priorityColor;
