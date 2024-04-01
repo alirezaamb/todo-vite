@@ -1,203 +1,149 @@
-import { getTableRow } from "../../api/get";
-import { addTodo } from "../../api/set";
-import { renderProducts } from "../page/Product/RenderProduct";
-import { El } from "../shared/El";
-import { closeModal } from "../shared/closeModal";
-import { OverlayModal } from "../shared/overlay";
-import { validateInputs } from "../shared/validateInput";
+import { getTableRow } from '../../api/get';
+import { addTodo } from '../../api/set';
+import { renderProducts } from '../page/Product/RenderProduct';
+import { El } from '../shared/El';
+import { closeModal } from '../shared/closeModal';
+import { OverlayModal } from '../shared/overlay';
+import { validateInputs } from '../shared/validateInput';
 
 export const editModal = () => {
-  const saveHandler = (e) => {
-    e.preventDefault();
-    // editRow();
-    getTableRow().then((data) => {
-      console.log(data.data, "tgk");
-      const a = data.data.filter((item) => item.id == "1711792136244");
-      console.log(a);
-    });
+  // const saveHandler = (e) => {
+  //   e.preventDefault();
+  //   // editRow();
+  //   getTableRow().then((data) => {
+  //     console.log(data.data, 'tgk');
+  //     const a = data.data.filter((item) => item.id == '1711792136244');
+  //     console.log(a);
+  //   });
 
-    // const taskInput = document.getElementById("task-input");
-    // const descriptionInput = document.getElementById("description_input");
-    // const dateInput = document.getElementById("date-input");
-    // const prioritySelect = document.getElementById("priority_select");
-    // const statusSelect = document.getElementById("status_select");
-
-    // function changeStatus() {
-    //   let statusColor = "";
-
-    //   switch (statusSelect.value) {
-    //     case "ToDo":
-    //       statusColor = "bg-red-500";
-
-    //       break;
-    //     case "Doing":
-    //       statusColor = "bg-yellow-500";
-
-    //       break;
-    //     case "Done":
-    //       statusColor = "bg-green-500";
-
-    //       break;
-    //   }
-    //   return statusColor;
-
-    // }
-
-    // function changePriority() {
-    //   let priorityColor = "";
-    //   switch (prioritySelect.value) {
-    //     case "Low":
-    //       priorityColor = "bg-red-500";
-    //       break;
-    //     case "Medium":
-    //       priorityColor = "bg-yellow-500";
-    //       break;
-    //     case "High":
-    //       priorityColor = "bg-green-500";
-    //       break;
-    //   }
-    //   return priorityColor;
-    // }
-
-    // let data = {
-    //   title: `${taskInput.value}`,
-    //   deadline: `${dateInput.value}`,
-    //   priority: `${prioritySelect.value}`,
-    //   status: `${statusSelect.value}`,
-    //   description: `${descriptionInput.value}`,
-    //   priorityColor: `${changePriority()}`,
-    //   statusColor: `${changeStatus()}`,
-    // };
-    // addTodo(data);
-    // const tableRowDiv = document.getElementById("tableRowDiv");
-    // tableRowDiv.remove();
-    // closeModal();
-    // let currentPage = document.getElementById("page").innerText;
-    // location.reload();
-    // renderProducts("", currentPage);
-  };
+  //   // const taskInput = document.getElementById("task-input");
+  //   // const descriptionInput = document.getElementById("description_input");
+  //   // const dateInput = document.getElementById("date-input");
+  //   // const prioritySelect = document.getElementById("priority_select");
+  //   // const statusSelect = document.getElementById("status_select");
+  // };
 
   return El({
-    element: "div",
-    id: "modalEdit",
+    element: 'div',
+    id: 'modalEdit',
     className:
-      "absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-2/4 h-2/4 bg-gray-200 rounded p-2 hidden",
+      'absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-2/4 h-2/4 bg-gray-200 rounded p-2 hidden',
     children: [
       El({
-        element: "form",
-        className: "flex flex-wrap gap-1 justify-evenly gap-y-3",
+        element: 'form',
+        className: 'flex flex-wrap gap-1 justify-evenly gap-y-3',
         children: [
           El({
-            element: "lable",
-            className: "flex flex-col gap-1",
-            innerText: "Task Title:",
+            element: 'lable',
+            className: 'flex flex-col gap-1',
+            innerText: 'Task Title:',
             children: [
               El({
-                element: "input",
-                className: "rounded-md border px-2 py-1",
-                type: "text",
-                placeholder: "Task",
-                id: "task-input",
+                element: 'input',
+                className: 'rounded-md border px-2 py-1',
+                type: 'text',
+                placeholder: 'Task',
+                id: 'edit-task-input',
               }),
             ],
           }),
           El({
-            element: "lable",
-            className: "flex flex-col gap-1",
-            innerText: "Priority:",
+            element: 'lable',
+            className: 'flex flex-col gap-1',
+            innerText: 'Priority:',
             children: [
               El({
-                element: "select",
+                element: 'select',
                 className:
-                  "rounded-md cursor-pointer px-2 py-1 flex flex-col h-[35px]",
-                name: "Priority",
-                id: "priority_select",
+                  'rounded-md cursor-pointer px-2 py-1 flex flex-col h-[35px]',
+                name: 'Priority',
+                id: 'edit-priority_select',
                 children: [
                   El({
-                    element: "option",
-                    value: "Low",
-                    innerText: "Low",
+                    element: 'option',
+                    value: 'Low',
+                    innerText: 'Low',
                   }),
                   El({
-                    element: "option",
-                    value: "Medium",
-                    innerText: "Medium",
+                    element: 'option',
+                    value: 'Medium',
+                    innerText: 'Medium',
                   }),
                   El({
-                    element: "option",
-                    value: "High",
-                    innerText: "High",
+                    element: 'option',
+                    value: 'High',
+                    innerText: 'High',
                   }),
                 ],
               }),
             ],
           }),
           El({
-            element: "lable",
-            className: "flex flex-col gap-1",
-            innerText: "Status:",
+            element: 'lable',
+            className: 'flex flex-col gap-1',
+            innerText: 'Status:',
             children: [
               El({
-                element: "select",
+                element: 'select',
                 className:
-                  "rounded-md cursor-pointer px-2 py-1 flex flex-col h-[35px]",
-                name: "Status",
-                id: "status_select",
+                  'rounded-md cursor-pointer px-2 py-1 flex flex-col h-[35px]',
+                name: 'Status',
+                id: 'edit-status_select',
                 children: [
                   El({
-                    element: "option",
-                    value: "ToDo",
-                    innerText: "ToDo",
+                    element: 'option',
+                    value: 'ToDo',
+                    innerText: 'ToDo',
                   }),
                   El({
-                    element: "option",
-                    value: "Doing",
-                    innerText: "Doing",
+                    element: 'option',
+                    value: 'Doing',
+                    innerText: 'Doing',
                   }),
                   El({
-                    element: "option",
-                    value: "Done",
-                    innerText: "Done",
+                    element: 'option',
+                    value: 'Done',
+                    innerText: 'Done',
                   }),
                 ],
               }),
             ],
           }),
           El({
-            element: "lable",
-            className: "flex flex-col gap-1",
-            innerText: "Deadline:",
+            element: 'lable',
+            className: 'flex flex-col gap-1',
+            innerText: 'Deadline:',
             children: [
               El({
-                element: "input",
-                className: "rounded-md border px-2 py-1 h-[35px]",
-                type: "date",
-                placeholder: "Select a date",
-                id: "date-input",
+                element: 'input',
+                className: 'rounded-md border px-2 py-1 h-[35px]',
+                type: 'date',
+                placeholder: 'Select a date',
+                id: 'edit-date-input',
               }),
             ],
           }),
           El({
-            element: "lable",
-            className: "flex flex-col gap-1",
-            innerText: "Description:",
+            element: 'lable',
+            className: 'flex flex-col gap-1',
+            innerText: 'Description:',
             children: [
               El({
-                element: "input",
-                className: "rounded-md p-5 flex flex-col gap-1",
-                type: "text",
-                placeholder: "description",
-                id: "description_input",
+                element: 'input',
+                className: 'rounded-md p-5 flex flex-col gap-1',
+                type: 'text',
+                placeholder: 'description',
+                id: 'edit-description_input',
               }),
             ],
           }),
 
           El({
-            element: "button",
+            element: 'button',
             className:
-              "absolute bottom-14 bg-green-300 px-3 py-1 rounded-md hover:bg-green-700 hover:text-white transition-all",
-            innerText: "Save",
-            onclick: saveHandler,
+              'absolute bottom-14 bg-green-300 px-3 py-1 rounded-md hover:bg-green-700 hover:text-white transition-all',
+            innerText: 'Save Changes',
+            id: 'edit-btn',
           }),
         ],
       }),

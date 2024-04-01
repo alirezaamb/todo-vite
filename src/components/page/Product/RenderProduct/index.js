@@ -20,9 +20,9 @@ import { El } from '../../../shared/El';
 
 /*write the code with fetch and then*/
 
-export const renderProducts = (findItem = '', page , filters) => {
-  getTableRow(findItem, page ,filters ).then((data) => {
-    console   .log(data.data);
+export const renderProducts = (findItem = '', page, filters) => {
+  getTableRow(findItem, page, filters).then((data) => {
+    // console   .log(data.data);
     const containerTbody = document.getElementById('table-one');
     const tableTbody = document.getElementById('tableTbody');
     tableTbody.innerText = '';
@@ -35,21 +35,6 @@ export const renderProducts = (findItem = '', page , filters) => {
     containerTbody.append(tableRowDiv);
   });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*write the code with async await*/
 

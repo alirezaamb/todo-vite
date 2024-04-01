@@ -11,8 +11,6 @@ export const filterModal = () => {
     const priorityFilter = document.getElementById('priority_filter');
     const statusFilter = document.getElementById('status_filter');
     const dateFilter = document.getElementById('date_filter');
-    //...{a,1,2,} = a
-    //...[a,b,c] = a,b,c
 
     const filterData = {
       ...(!!priorityFilter.value && { priority: priorityFilter.value }), // ...{ priority: priorityFilter.value },
