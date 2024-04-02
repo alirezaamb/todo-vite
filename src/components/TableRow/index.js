@@ -23,10 +23,13 @@ export const createTableRow = (data) => {
 
     axios.get(`${BASE_URL}/todo/${selectedForDescription}`).then((response) => {
       const data = response;
-      document.getElementById('description-title').innerText = data.data.title;
+      document.getElementById(
+        'description-title'
+      ).innerText = `Title:   ${data.data.title}`;
 
-      document.getElementById('description-description').innerText =
-        data.data.description;
+      document.getElementById(
+        'description-description'
+      ).innerText = `Description:   ${data.data.description}`;
       DesModal();
 
       // console.log(data.data);
