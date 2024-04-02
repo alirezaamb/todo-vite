@@ -14,6 +14,7 @@ export const header = () => {
     let findItem = event.target.value;
 
     renderProducts(findItem);
+    // debounce(renderProducts, 5000);
   };
   const openFilterModal = () => {
     const modalFilter = document.getElementById('modalFilter');
@@ -67,7 +68,7 @@ export const header = () => {
                 type: 'text',
                 placeholder: 'search',
                 id: 'input',
-                onkeyup: searchProduct,
+                onkeyup: debounce(searchProduct, 1000),
               }),
             ],
           }),
