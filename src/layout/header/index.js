@@ -8,23 +8,17 @@ export const header = () => {
   const searchProduct = (event) => {
     const tableRowDiv = document.getElementById('tableRowDiv');
     tableRowDiv.remove();
-    // location.reload()
     let currentPage = '1';
     document.getElementById('page').innerHTML = currentPage;
 
     let findItem = event.target.value;
-    // console.log(findItem);
-
-    // console.log(tableRowDiv);
 
     renderProducts(findItem);
-    // debounce(() => renderProducts(findItem), 2000);
   };
-const openFilterModal = ()=>{
-  const modalFilter = document.getElementById("modalFilter")
-modalFilter.classList.remove("hidden")
-}
-
+  const openFilterModal = () => {
+    const modalFilter = document.getElementById('modalFilter');
+    modalFilter.classList.remove('hidden');
+  };
 
   const openAddModal = () => {
     const overlayModal = document.getElementById('overlayModal');
@@ -34,7 +28,8 @@ modalFilter.classList.remove("hidden")
   };
   return El({
     element: 'div',
-    className: 'text-white  bg-[#6900e8] flex justify-between p-2 py-4 h-[60px]',
+    className:
+      'text-white  bg-[#6900e8] flex justify-between p-2 py-4 h-[60px]',
     children: [
       El({
         element: 'div',
@@ -80,7 +75,7 @@ modalFilter.classList.remove("hidden")
             element: 'img',
             src: '../../src/assets/image/icon-filter.png',
             className: 'w-7 h-7 cursor-pointer',
-            onclick : openFilterModal,
+            onclick: openFilterModal,
           }),
           El({
             element: 'img',

@@ -9,7 +9,6 @@ import { DesModal } from '../modal-description';
 
 export const createTableRow = (data) => {
   const editButton = document.getElementById('edit-btn');
-  // console.log(editButton);
 
   const moreInfo = (e) => {
     const overlayModal = document.getElementById('overlayModal');
@@ -19,7 +18,6 @@ export const createTableRow = (data) => {
     descriptionModal.classList.remove('hidden');
 
     const selectedForDescription = e.target.id;
-    // console.log(selectedForDescription);
 
     axios.get(`${BASE_URL}/todo/${selectedForDescription}`).then((response) => {
       const data = response;
@@ -31,9 +29,6 @@ export const createTableRow = (data) => {
         'description-description'
       ).innerText = `Description:   ${data.data.description}`;
       DesModal();
-
-      // console.log(data.data);
-      // console.log(DesModal(data.data));
     });
   };
 
@@ -52,7 +47,6 @@ export const createTableRow = (data) => {
       document.getElementById('edit-date-input').value = data.deadline;
       document.getElementById('edit-priority_select').value = data.priority;
       document.getElementById('edit-status_select').value = data.status;
-      // console.log(data);
       editButton.addEventListener('click', () => {
         const prioritySelectEdit = document.getElementById(
           'edit-priority_select'
@@ -122,7 +116,6 @@ export const createTableRow = (data) => {
 
       renderProducts('', currentPage);
     });
-    // .catch((err) => console.error(err));
   };
 
   return El({

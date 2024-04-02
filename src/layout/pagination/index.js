@@ -14,24 +14,17 @@ export const pagination = () => {
     tableTbody.innerHTML = 'loading...';
     const tableRowDiv = document.getElementById('tableRowDiv');
     tableRowDiv.remove();
-    // console.log(currentPage);
     renderProducts('', currentPage);
   };
   const nextPage = () => {
-    // if (currentPage === 1) return ;
-    // console.log(`total = ${totalPage.totalPage
-    // }`);
     if (currentPage >= totalPage.totalPage) return;
 
     document.getElementById('page').innerHTML = ++currentPage;
-    // console.log(currentPage);
-    // const tableTbody = document.querySelector("#tableTbody");
-    // tableTbody.innerHTML = "loading...";
+
     const tableRowDiv = document.getElementById('tableRowDiv');
     tableRowDiv.remove();
     renderProducts('', currentPage);
   };
-  //   renderProducts("", currentPage);
 
   return El({
     element: 'div',

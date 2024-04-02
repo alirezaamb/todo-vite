@@ -1,26 +1,8 @@
 import { createTableRow } from '../../components/TableRow';
 import { El } from '../../components/shared/El';
 import { pagination } from '../pagination';
-    // let currentPage = 1;
 
 export const table = () => {
-  // const prevPage = () => {
-  //   document.getElementById("page").innerHTML = currentPage;
-  //   if (currentPage === 1) return;
-  //   document.getElementById("page").innerHTML = --currentPage;
-  //   const container = document.querySelector("#productContainer");
-  //   container.innerHTML = "loading...";
-  //   renderProducts( findItem = "",currentPage);
-  // };
-  // const nextPage = () => {
-  //   if (currentPage >= totalPage.totalPage) return;
-
-  //   document.getElementById("page").innerHTML = ++currentPage;
-  //   const container = document.querySelector("#productContainer");
-  //   container.innerHTML = "loading...";
-  //   renderProducts( findItem = "",currentPage);
-  // };
-
   return El({
     element: 'section',
     className: 'w-100% mt-10',
@@ -72,12 +54,10 @@ export const table = () => {
             element: 'div',
             id: 'tableTbody',
             innerText: 'loading...',
-            // children: [],
           }),
         ],
       }),
-     pagination()
+      pagination(),
     ],
   });
-  
 };

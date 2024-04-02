@@ -1,20 +1,7 @@
-import axios from "axios";
-import { BASE_URL } from "../const";
+import axios from 'axios';
+import { BASE_URL } from '../const';
 
-// export const getTableRow = async (findItem = '', page = 1 , filters = {}) => {
-//   const params = new URLSearchParams(filters).toString();
-
-//   const response = await axios.get(
-//     `${BASE_URL}/todo?title_like=${findItem}&_page=${page}&_limit=5${params}`
-//   );
-
-export const getTableRow = async (findItem = "", page = 1, filters = {}) => {
-  // {key:value,key1:value1}
-  // [[key,value],[key1,value1]]
-
-  // const filteredParams = Object.fromEntries(
-  //   Object.entries(filters).filter((item) => item[1] !== '')
-  // );
+export const getTableRow = async (findItem = '', page = 1, filters = {}) => {
   const params = new URLSearchParams(filters).toString();
 
   const response = await axios.get(
@@ -22,7 +9,7 @@ export const getTableRow = async (findItem = "", page = 1, filters = {}) => {
   );
   return {
     data: response.data,
-    totalPage: Math.ceil(response.headers["x-total-count"] / 5),
+    totalPage: Math.ceil(response.headers['x-total-count'] / 5),
   };
 };
 

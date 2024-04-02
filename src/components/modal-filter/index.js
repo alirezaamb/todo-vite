@@ -13,49 +13,15 @@ export const filterModal = () => {
     const dateFilter = document.getElementById('date_filter');
 
     const filterData = {
-      ...(!!priorityFilter.value && { priority: priorityFilter.value }), // ...{ priority: priorityFilter.value },
+      ...(!!priorityFilter.value && { priority: priorityFilter.value }),
       ...(!!statusFilter.value && { status: statusFilter.value }),
       ...(!!dateFilter.value && { deadline: dateFilter.value }),
-      // deadline : dateFilter.value
     };
     console.log(filterData);
     const tableRowDiv = document.getElementById('tableRowDiv');
     tableRowDiv.remove();
     renderProducts('', 1, filterData);
-
-    // RendersPr("" , 1 , filterData)
   };
-
-  // const changePriority = (event) => {
-  //   const priorityFilter = document.getElementById("priority_filter");
-  //   console.log(priorityFilter);
-
-  //   // return priorityFilter.value || "";
-  // };
-  // const changeStatus = () => {
-  //   const statusFilter = document.getElementById("status_filter");
-  //   return console.log(statusFilter);
-  // };
-  // changeStatus();
-  // changePriority();
-
-  // const userFilter= {
-  // priority : priorityFilter.value
-  // status :
-
-  //       }
-
-  // const changeDate = () => {
-  //   const dateFilter = document.getElementById("date_filter");
-  //   return dateFilter.value || "";
-  // };
-  // const filterData = {
-  //   priority: changePriority(),
-  // status: changeStatus(),
-  // deadline: changeDate(),
-  // };
-
-  // getTableRow("" , 1 , filterData)
 
   return El({
     element: 'div',
@@ -91,7 +57,6 @@ export const filterModal = () => {
         className: 'rounded-md cursor-pointer px-2 py-1 h-[40px]',
         name: 'Priority',
         id: 'priority_filter',
-        // onchange: changePriority,
         children: [
           El({
             element: 'option',
@@ -125,7 +90,6 @@ export const filterModal = () => {
         className: 'rounded-md cursor-pointer px-2 py-1  h-[40px]',
         name: 'Status',
         id: 'status_filter',
-        // onchange: changeStatus,
         children: [
           El({
             element: 'option',
@@ -158,7 +122,6 @@ export const filterModal = () => {
         element: 'input',
         className: 'rounded-md border px-2 py-1 h-[40px]',
         type: 'date',
-        // onchange: changeDate,
         placeholder: 'Select a date',
         id: 'date_filter',
       }),
