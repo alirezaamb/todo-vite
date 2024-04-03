@@ -41,7 +41,8 @@ export const filterModal = () => {
           }),
           El({
             element: 'span',
-            className: 'cursor-pointer font-bold',
+            className:
+              'cursor-pointer font-bold px-2 py-1 rounded-lg hover:bg-blue-200 transition-all',
             innerText: 'X',
             onclick: closeFilter,
           }),
@@ -120,7 +121,8 @@ export const filterModal = () => {
       }),
       El({
         element: 'input',
-        className: 'rounded-md border px-2 py-1 h-[40px] cursor-pointer',
+        className:
+          'rounded-md border px-2 py-1 h-[40px] cursor-pointer outline-none',
         type: 'date',
         placeholder: 'Select a date',
         id: 'date_filter',
