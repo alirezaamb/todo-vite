@@ -18,7 +18,7 @@ export const header = () => {
   };
   const openFilterModal = () => {
     const modalFilter = document.getElementById('modalFilter');
-    modalFilter.classList.remove('hidden');
+    modalFilter.classList.toggle('hidden');
   };
 
   const openAddModal = () => {

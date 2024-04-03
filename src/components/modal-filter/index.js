@@ -28,7 +28,7 @@ export const filterModal = () => {
     id: 'modalFilter',
 
     className:
-      'hidden flex flex-col h-full gap-8 w-[40%] absolute end-0  top-0  bg-blue-100 p-4 my-[60px]',
+      'hidden flex flex-col h-fit gap-8 w-[30%] absolute end-0  top-0  bg-blue-100 p-4 my-[60px] rounded',
     children: [
       El({
         element: 'div',
@@ -120,14 +120,15 @@ export const filterModal = () => {
       }),
       El({
         element: 'input',
-        className: 'rounded-md border px-2 py-1 h-[40px]',
+        className: 'rounded-md border px-2 py-1 h-[40px] cursor-pointer',
         type: 'date',
         placeholder: 'Select a date',
         id: 'date_filter',
       }),
       El({
         element: 'button',
-        className: 'rounded-md bg-blue-300',
+        className:
+          'rounded-md bg-blue-300 w-[42%] p-[4px] self-center hover:bg-blue-500 hover:text-white transition-all',
         innerText: 'Filter',
         onclick: submitFilter,
       }),
